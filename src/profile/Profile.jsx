@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 const Profile = (props) => {
-  const { fullName, bio, profession, children } = props;
-  const showfullName = (fullName) => alert(`full name: ${fullName}`);
-  const handleClick = (e) => showfullName(fullName);
+  const { fullName, bio, profession, children, handleName } = props;
+
+  const handleClick = (e) => handleName(fullName);
   return (
     <div
       className="card"
@@ -49,6 +49,7 @@ const Profile = (props) => {
         {children}
       </div>
       <br />
+
       <button>
         <a href="#!" onClick={handleClick} style={{ color: "#A0522D" }}>
           Full Name
